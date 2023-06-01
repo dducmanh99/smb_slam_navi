@@ -1,0 +1,21 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="slam_methods" default="karto" doc="slam type [gmapping, cartographer, hector, karto, frontier_exploration]"/>
+  <!--<arg name="configuration_basename" default="vcr_lds_2d.lua"/>-->
+  <arg name="open_rviz" default="true"/>
+
+  <!-- smb -->
+  <!--<include file="$(find smb_bringup)/launch/smb_remote.launch">
+  </include>-->
+
+  <!-- SLAM: Gmapping, Cartographer, Hector, Karto, Frontier_exploration, RTAB-Map -->
+  <include file="$(find smb_slam)/launch/smb_$(arg slam_methods).launch">
+  <!--  <arg name="configuration_basename" value="$(arg configuration_basename)"/>-->
+  </include>
+
+  <!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find smb_slam)/rviz/smb_slam_rviz.rviz"/>
+  </group>
+</launch>

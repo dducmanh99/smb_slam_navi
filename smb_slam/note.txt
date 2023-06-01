@@ -1,0 +1,21 @@
+visualize position of robot : 
+
+1. Load robot in gazebo: 
+    roslaunch smb_gazebo smb_gazebo.launch
+
+2. Run SLAM: 
+    roslaunch smb_slam smb_slam.launch slam_method:=gmapping,karto
+
+3. Run teleop key 
+    roslaunch smb_teleop smb_teleop_key.launch
+
+4. visualize position in rqt_multiplot 
+    rosrun rqt_multiplot rqt_multiplot 
+
+5. open template in /smb_slam/rviz/rqt_multiplot.xml in rqt_multiplot
+
+6. create topic publish position (real, esti, elf) to rqt_multiplot
+    rosrun smb_slam plot_pose.py 
+    rosrun smb_slam plot_ekf.py 
+    
+

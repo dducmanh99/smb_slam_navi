@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="smb_slam" name="get_cmd" type="get_cmd.py" output="screen">
+    </node>
+
+    <node pkg="smb_slam" name="transform" type="transform.py" output="screen">
+    </node>
+</launch>

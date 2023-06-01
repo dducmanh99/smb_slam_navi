@@ -1,0 +1,3 @@
+<launch>
+    <rosparam command="load" file="$(find smb_scan)/config/params.yaml" />
+</launch>

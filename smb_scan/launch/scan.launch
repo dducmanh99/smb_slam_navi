@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="smb_scan" name="scan" type="scan.py" output="screen">
+    </node>
+</launch>
