@@ -1,0 +1,14 @@
+1. run file in catkin_ws/src 
+	cd catkin_ws 
+	source devel/setup.bash 
+	cd smb/common/smb_.../launch 
+	roslaunch 
+2. xem kieu du lieu truyen trong topic 
+	rostopic type /cmd_vel 
+	-> tra kieu du lieu su dung nhu nao hoac dung 
+	rostopic pub /cmd_vel -> nhan tab -> chinh thong so 
+3. tai teleop_twist_keyboard tren ros-wiki 
+	sudo apt-get install ros-notic-telep-twist-keyboard
+	rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+
+	
